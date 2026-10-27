@@ -61,6 +61,11 @@ function consultOrb() {
   if (busy) return;
   busy = true;
 
+  // Fire-and-forget: counts the click without delaying the animation.
+  fetch("/api/click", { method: "POST" }).catch(() => {
+    // Counting is best-effort; the fortune still works if this fails.
+  });
+
   fortuneEl.classList.remove("show");
   orb.classList.remove("active");
   void orb.offsetWidth; // restart the animation on repeat clicks
