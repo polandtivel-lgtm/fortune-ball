@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Crystal Ball</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="fog" id="fog" aria-hidden="true"></div>
+
+  <main class="stage">
+    <img class="bg" src="background.jpg" alt="Witch's room with a black cat and a crystal ball on the table" />
+
+    <!-- Button sits exactly over the crystal ball in the picture -->
+    <button id="orb" class="orb" aria-label="Crystal ball. Click to reveal your fortune.">
+      <span class="orb-text">Click me if you want to know your fortune</span>
+      <span class="smoke" aria-hidden="true"></span>
+      <span class="sparkles" aria-hidden="true"></span>
+    </button>
+
+    <p id="fortune" class="fortune" aria-live="polite"></p>
+  </main>
+
+  <script src="fortunes.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
